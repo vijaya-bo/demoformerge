@@ -1,6 +1,9 @@
-FROM python:3
-WORKDIR /usr/src/app
-COPY pythoninstallation.txt ./
-RUN pip install -r pythoninstallation.txt
-COPY index.py ./
-CMD ["python", "./index.py"]
+FROM ubuntu:16.04
+
+RUN apt-get update && apt-get install -y python python-pip
+
+RUN pip install flask 
+
+COPY index.py /opt/
+
+ENTRYPOINT FLASK_APP=/opt/index.py flask run --host=0.0.0.0 --port=8080
