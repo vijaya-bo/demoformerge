@@ -3,4 +3,4 @@ WORKDIR /usr/src/app
 COPY pythoninstallation.txt ./
 RUN pip install -r pythoninstallation.txt
 COPY ..
-CMD ["python", "/test.py"]
+CMD ["python", "/index.py"]
