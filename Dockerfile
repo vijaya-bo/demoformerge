@@ -1,6 +1,6 @@
 FROM python:3
 WORKDIR /usr/src/app
-COPY pythoninstallation ./
-RUN pip install -r pythoninstallation
+COPY pythoninstallation.txt ./
+RUN pip install -r pythoninstallation.txt
 COPY ..
 CMD ["python", "/index.py"]
