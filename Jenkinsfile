@@ -3,7 +3,7 @@ pipeline{
     stages{
     	stage('GIT Clone'){
     	    steps{
-    		    git credentialsId: 'GitHubCreden', url: 'https://github.com/vijaya-bo/InfosysTest.git'
+    		    git credentialsId: 'GitHubCreden', url: 'https://github.com/vijaya-bo/demoformerge.git'
     	    }
     	}
     	stage('DockerBuild'){
